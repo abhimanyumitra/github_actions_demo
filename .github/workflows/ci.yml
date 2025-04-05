@@ -45,4 +45,4 @@ jobs:
         sudo apt-get install trivy
     
     - name: scan using trivy
-      run: trivy fs --format table -o output.json 
+      run: trivy fs --format table -o output.json . 

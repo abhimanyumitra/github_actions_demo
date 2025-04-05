@@ -17,7 +17,7 @@ on:
 jobs:
   mvn_build:
 
-    runs-on: ubuntu-latest
+    runs-on: gcp-runner
 
     steps:
     - uses: actions/checkout@v4
@@ -32,7 +32,9 @@ jobs:
 
   security_scan:
 
-    runs-on: ubuntu-latest
+    runs-on: gcp-runner
+    needs: mvn_build
+      
 
     steps:
     - uses: actions/checkout@v4
